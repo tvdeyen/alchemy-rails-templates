@@ -2,6 +2,11 @@
 
 Use these Rails templates to make a new Rails project with Alchemy installed.
 
+=== Usage:
+
 * <tt>install_alchemy.rb</tt>:
 
+Type this into your terminal:
+
   rails YOUR_APP_NAME -d mysql -m install_alchemy
+
