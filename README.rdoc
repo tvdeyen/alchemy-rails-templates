@@ -1,0 +1,5 @@
+== Rails templates for the Alchemy WebCMS
+
+* +install_alchemy.rb+
+
+  rails YOUR_APP_NAME -d mysql -m install_alchemy
