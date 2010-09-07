@@ -13,7 +13,7 @@ gem 'gettext', :lib => false, :version => '>=1.9.3'
 gem 'rmagick', :lib => "RMagick2", :version => '>=2.12.2'
 gem 'tvdeyen-ferret', :version => '>=0.11.8.1', :lib => 'ferret'
 gem 'will_paginate', :version => '>=2.3.12'
-gem 'mimetype-fu', :version => '>=0.1.2'
+gem 'mimetype-fu', :version => '>=0.1.2', :lib => 'mimetype_fu'
 
 rake 'gems:install'
 
