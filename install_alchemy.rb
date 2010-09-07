@@ -20,7 +20,6 @@ rake 'gems:install'
 # Installing a lot of plugins for Alchemy
 plugin "acts_as_list", :git => "git://github.com/rails/acts_as_list.git"
 plugin "alchemy", :git => "git://github.com/tvdeyen/alchemy.git"
-plugin "asset_packager", :git => "git://github.com/sbecker/asset_packager.git"
 plugin "attachment_fu", :git => "git://github.com/technoweenie/attachment_fu.git"
 plugin "i18n_label", :git => "git://github.com/iain/i18n_label.git"
 plugin "tinymce_hammer", :git => "git://github.com/trevorrowe/tinymce_hammer.git"
@@ -50,18 +49,21 @@ if yes?('Use a git repository?')
   git :add => ".", :commit => "-m 'initial commit'"
 end
 
-puts "++++++++++++++++++ SUCCESS! Have a lot of fun with Alchemy! ++++++++++++++++++++++"
-puts "+                                                                                +"
-puts "+ Next steps:                                                                    +"
-puts "+                                                                                +"
-puts "+ 1. Add these two lines into your environment.rb file:                          +"
-puts "+                                                                                +"
-puts "+ config.load_paths += %W( #{RAILS_ROOT}/vendor/plugins/alchemy/app/sweepers )   +"
-puts "+ config.load_paths += %W( #{RAILS_ROOT}/vendor/plugins/alchemy/app/middleware ) +"
-puts "+                                                                                +"
-puts "+ 2. Then create your database and migrate the Alchemy tables:                   +"
-puts "+                                                                                +"
-puts "+ rake db:create                                                                 +"
-puts "+ rake db:migrate:alchemy                                                        +"
-puts "+                                                                                +"
-puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+readme = <<EOF
+++++++++++++++++++ SUCCESS! Have a lot of fun with Alchemy! ++++++++++++++++++++++
++                                                                                +"
++ Next steps:                                                                    +"
++                                                                                +"
++ 1. Add these two lines into your environment.rb file:                          +"
++                                                                                +"
++ config.load_paths += %W( #{RAILS_ROOT}/vendor/plugins/alchemy/app/sweepers )   +"
++ config.load_paths += %W( #{RAILS_ROOT}/vendor/plugins/alchemy/app/middleware ) +"
++                                                                                +"
++ 2. Then create your database and migrate the Alchemy tables:                   +"
++                                                                                +"
++ rake db:create                                                                 +"
++ rake db:migrate:alchemy                                                        +"
++                                                                                +"
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+EOF
+puts readme
