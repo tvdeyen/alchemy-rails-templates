@@ -26,12 +26,15 @@ plugin "i18n_label", :git => "git://github.com/iain/i18n_label.git"
 plugin "tinymce_hammer", :git => "git://github.com/trevorrowe/tinymce_hammer.git"
 plugin "userstamp", :git => "git://github.com/delynn/userstamp.git"
 
-rake "db:create"
-rake "db:migrate:alchemy"
+# TODO: We need a generator for adding these two lines into the environment.rb file
+#     config.load_paths += %W( #{RAILS_ROOT}/vendor/plugins/alchemy/app/sweepers )
+#     config.load_paths += %W( #{RAILS_ROOT}/vendor/plugins/alchemy/app/middleware )
+# When we have this generaotr, then we can migrate within this script
+#rake "db:create"
+#rake "db:migrate:alchemy"
 
 run "rm public/index.html"
-
-run "cp vendor/plugins/alchemy/config/asset_packages.yml config/"
+rake "alchemy:assets:copy:all"
 
 if yes?('Use a git repository?')
   git :init
@@ -47,4 +50,18 @@ if yes?('Use a git repository?')
   git :add => ".", :commit => "-m 'initial commit'"
 end
 
-puts "++++++++ SUCCESS! Have a lot of fun with Alchemy! +++++++++"
+puts "++++++++++++++++++ SUCCESS! Have a lot of fun with Alchemy! ++++++++++++++++++++++"
+puts "+                                                                                +"
+puts "+ Next steps:                                                                    +"
+puts "+                                                                                +"
+puts "+ 1. Add these two lines into your environment.rb file:                          +"
+puts "+                                                                                +"
+puts "+ config.load_paths += %W( #{RAILS_ROOT}/vendor/plugins/alchemy/app/sweepers )   +"
+puts "+ config.load_paths += %W( #{RAILS_ROOT}/vendor/plugins/alchemy/app/middleware ) +"
+puts "+                                                                                +"
+puts "+ 2. Then create your database and migrate the Alchemy tables:                   +"
+puts "+                                                                                +"
+puts "+ rake db:create                                                                 +"
+puts "+ rake db:migrate:alchemy                                                        +"
+puts "+                                                                                +"
+puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
