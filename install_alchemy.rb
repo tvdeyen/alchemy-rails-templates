@@ -13,6 +13,7 @@ gem 'gettext', :lib => false, :version => '>=1.9.3'
 gem 'rmagick', :lib => "RMagick2", :version => '>=2.12.2'
 gem 'tvdeyen-ferret', :version => '>=0.11.8.1', :lib => 'ferret'
 gem 'will_paginate', :version => '>=2.3.12'
+gem 'mimetype-fu', :version => '>=0.1.2'
 
 rake 'gems:install'
 
@@ -24,7 +25,6 @@ plugin "attachment_fu", :git => "git://github.com/technoweenie/attachment_fu.git
 plugin "i18n_label", :git => "git://github.com/iain/i18n_label.git"
 plugin "tinymce_hammer", :git => "git://github.com/trevorrowe/tinymce_hammer.git"
 plugin "userstamp", :git => "git://github.com/delynn/userstamp.git"
-plugin "mimetype-fu", :git => "git://github.com/mattetti/mimetype-fu.git"
 
 rake "db:create"
 rake "db:migrate:alchemy"
