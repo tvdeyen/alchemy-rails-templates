@@ -2,7 +2,7 @@
 # Run it with +rails YOUR_APP_NAME -d mysql -m install_alchemy+.
 
 # GEM Dependencies for Alchemy
-gem 'acts_as_ferret', :version => '>=0.4.8'
+gem 'acts_as_ferret', :version => '0.4.8'
 gem 'authlogic', :version => '>=2.1.2'
 gem 'awesome_nested_set', :version => '>=1.4.3'
 gem 'declarative_authorization', :version => '>=0.4.1'
