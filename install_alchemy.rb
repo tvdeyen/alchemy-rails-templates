@@ -35,20 +35,6 @@ plugin "userstamp", :git => "git://github.com/delynn/userstamp.git"
 run "rm public/index.html"
 rake "alchemy:assets:copy:all"
 
-if yes?('Use a git repository?')
-  git :init
-  file ".gitignore", <<-END
-  .DS_Store
-  log/*.log
-  tmp/**/*
-  config/database.yml
-  index/*
-  uploads/*
-  END
-  run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
-  git :add => ".", :commit => "-m 'initial commit'"
-end
-
 readme = <<EOF
 ++++++++++++++++++ SUCCESS! Have a lot of fun with Alchemy! ++++++++++++++++++++++
 +                                                                                +"
