@@ -51,6 +51,18 @@ readme = <<EOF
 + rake db:create                                                                 +"
 + rake db:migrate:alchemy                                                        +"
 +                                                                                +"
++ 3. write this line into your db/seeds.rb:                                      +"
++                                                                                +"
++ Alchemy::Seeder.seed!                                                          +"
++                                                                                +"
++ 4. Seed your database:                                                         +"
++                                                                                +"
++ rake db:seed                                                                   +"
++                                                                                +"
++ 5. Copy Alchemy assets to your public folder:                                  +"
++                                                                                +"
++ rake alchemy:assets:copy:all                                                   +"
++                                                                                +"
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 EOF
 puts readme
