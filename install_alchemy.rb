@@ -23,6 +23,7 @@ plugin "acts_as_list", :git => "git://github.com/rails/acts_as_list.git"
 plugin "alchemy", :git => "git://github.com/tvdeyen/alchemy.git"
 plugin "attachment_fu", :git => "git://github.com/technoweenie/attachment_fu.git"
 plugin "i18n_label", :git => "git://github.com/iain/i18n_label.git"
+plugin "jrails", :git => "git://github.com/aaronchi/jrails.git"
 plugin "tinymce_hammer", :git => "git://github.com/trevorrowe/tinymce_hammer.git"
 plugin "userstamp", :git => "git://github.com/delynn/userstamp.git"
 
