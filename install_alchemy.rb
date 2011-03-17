@@ -9,7 +9,7 @@ gem 'awesome_nested_set', :version => '>=1.4.3'
 gem 'declarative_authorization', :version => '>=0.4.1'
 gem "fleximage", :version => ">=1.0.4"
 gem 'fast_gettext', :version => '>=0.4.8'
-gem 'gettext_i18n_rails', :version => '>=0.2.3'
+gem 'gettext_i18n_rails', :version => '>=0.2.13'
 gem 'gettext', :lib => false, :version => '>=1.9.3'
 gem 'rmagick', :lib => "RMagick2", :version => '>=2.12.2'
 gem 'jk-ferret', :version => '>=0.11.8.2', :lib => 'ferret'
